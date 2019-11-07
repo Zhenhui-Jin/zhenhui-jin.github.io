@@ -6,4 +6,14 @@
     "sha256_cert_fingerprints":
     ["1B:BF:7E:66:05:BC:F5:53:DB:64:9D:39:B6:ED:22:2D:70:D4:A1:9D:A2:CC:9C:1A:E4:C5:5C:78:6D:C4:59:C5"]
   }
-}]
+},
+ {
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.mtel.happygo",
+    "sha256_cert_fingerprints":
+    ["92:DA:45:CD:7D:15:2E:81:89:DE:C1:A1:4C:12:F7:D1:51:AC:06:38:4A:6E:4B:5A:43:CB:8C:5D:AC:C1:66:CA"]
+  }
+}
+]
