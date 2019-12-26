@@ -27,6 +27,46 @@
                     <a href="hgapp://go?view=homeview" >hgapp://go?view=homeview</a>
             </div>
            
-              
+              <button id="openApp1" onclick="openApp1()">Download APP</button>
+                
+              <button id="openApp2" onclick="openApp2()">Download APP</button>
+              <button id="openApp3" onclick="openApp3()">Download APP</button>
         </body>
+        
+        <script>
+    function openApp1(){
+        var deepLink = "hgapp://hgweb.mtel.ws/go.html?view=homeview";
+        window.location = deepLink;
+    }
+                
+    function openApp2(){
+        var deepLink = "https://hgweb.mtel.ws/go.html?view=homeview";
+        window.location = deepLink;
+    }
+                
+    function openApp3(){
+        var deepLink = "hgapp://go?view=homeview";
+        window.location = deepLink;
+    }
+                
+/*
+    function downloadApp(){
+        var downLoadLink = { // 下载地址
+            android: "https://play.google.com/store/apps/details?id=com.ddim.happygo",
+            ios: "https://itunes.apple.com/us/app/happy-go-ka-shou-ji-ban/id435072839?l=zh&ls=1&mt=8",
+            pc: "https://www.happygocard.com.tw/official/event/HAPPYGOAPP/index.html"
+        }
+        var link;
+        if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+            link = downLoadLink.ios;
+        } else if (navigator.userAgent.match(/android/i)) {
+            link = downLoadLink.android;
+        }
+        var _window = window.open(link);
+        setTimeout(function() {
+            _window.close();
+        }, 1000)
+    }
+*/
+</script>
     </html>
