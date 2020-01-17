@@ -6,4 +6,17 @@
     "sha256_cert_fingerprints":
     ["1B:BF:7E:66:05:BC:F5:53:DB:64:9D:39:B6:ED:22:2D:70:D4:A1:9D:A2:CC:9C:1A:E4:C5:5C:78:6D:C4:59:C5"]
   }
-}]
+},
+ {
+    "relation": [
+        "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+        "namespace": "android_app",
+        "package_name": "com.ddim.happygo",
+        "sha256_cert_fingerprints": [
+            "4B:78:16:26:36:E6:5E:C6:3F:BC:5E:4F:4B:13:36:F0:9A:44:77:CB:FA:D9:75:66:87:A2:34:C7:A4:5A:10:7C"
+        ]
+    }
+}
+]
