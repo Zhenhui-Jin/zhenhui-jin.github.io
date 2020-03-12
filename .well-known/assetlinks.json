@@ -1,4 +1,16 @@
-[{
+[    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.uatfortress.sim",
+            "sha256_cert_fingerprints": [
+                "99:DB:DE:93:3D:A1:FA:63:83:DE:70:8A:87:30:6F:12:14:8E:16:C8:7F:D0:50:21:71:9A:5A:F9:E8:AB:E2:71"
+            ]
+        }
+    },
+ {
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
