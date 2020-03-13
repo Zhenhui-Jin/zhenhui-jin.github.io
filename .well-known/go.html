@@ -1,82 +1,78 @@
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Share</title>
 
-        <head>
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
-            <meta name="apple-mobile-web-app-capable" content="yes">
-            <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-    
-            <title>this's a demo</title>
-            <meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,minimal-ui">
-        </head>
-        <body>
-                  <br>
-                超链接：
-                <br>
-            <div>
-                <a class="label" href="https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000" >立即打开&gt;&gt;</a>
-                
-            </div>
-                  <br>
-        <divhttps://hgweb.mtel.ws/go.html?v>
-                  <a href="iew=homeview" >https://hgweb.mtel.ws/go.html?view=homeview</a>
-            </div>
-            <br>
-                 <div>
-                  
-                         <a href="https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000" >https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000</a>
-            </div>
-                  <br>
-            <div>
-                  
-                    <a href="https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000" >https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000</a>
-            </div>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      text-align: center;
+      font-family: Arial,"Microsoft YaHei";
+    }
+    button {
+      width: 162px;
+      border: 0;
+      background: #df9940;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 15px;
+      line-height: 40px;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      margin-left: -81px;
+      letter-spacing: .2px;
+    }
+    .bg{
+      width: 100%;
+      height: 100vh;
+      background: url("./bg.jpg") no-repeat center;
+      background: cover;
+    }
+    #download{
 
-             <br>
-                <br>
-                window.location:
-                <br><div>
-              <button id="openApp1" onclick="openApp1()">https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000</button>
-             </div> <br><div>
-              <button id="openApp2" onclick="openApp2()">https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000</button>
-                 </div> <br><div>
-              <button id="openApp3" onclick="openApp3()">https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000</button></div>
-        </body>
-        
-        <script>
-    function openApp1(){
-        var deepLink = "https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000";
-        window.location = deepLink;
     }
-                
-    function openApp2(){
-        var deepLink = "https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000";
-        window.location = deepLink;
+  </style>
+</head>
+<body>
+<div class="bg">
+
+</div>
+<button id="download" onclick="downloadApp()">Download APP</button>
+</body>
+<script>
+  function openApp() {
+    if (!navigator.userAgent.match(/(iPhone|iPod|iPad|android);?/i)) {
+      window.location =  "https://www.fortress.com.hk/zt/hahasim";
+    }else if(navigator.userAgent.match(/(android);?/i)){
+      window.location.href = "https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000";
     }
-                
-    function openApp3(){
-        var deepLink = "https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000";
-        window.location = deepLink;
+  }
+
+  openApp();
+
+
+  function downloadApp(){
+    var downLoadLink = { // 下载地址
+      android : "https://play.google.com/store/apps/details?id=com.fortress.sim",
+      ios : "https://apps.apple.com/app/id1482719988"
     }
-                
-/*
-    function downloadApp(){
-        var downLoadLink = { // 下载地址
-            android: "https://play.google.com/store/apps/details?id=com.ddim.happygo",
-            ios: "https://itunes.apple.com/us/app/happy-go-ka-shou-ji-ban/id435072839?l=zh&ls=1&mt=8",
-            pc: "https://www.happygocard.com.tw/official/event/HAPPYGOAPP/index.html"
-        }
-        var link;
-        if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
-            link = downLoadLink.ios;
-        } else if (navigator.userAgent.match(/android/i)) {
-            link = downLoadLink.android;
-        }
-        var _window = window.open(link);
-        setTimeout(function() {
-            _window.close();
-        }, 1000)
+    var link;
+    if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+      link = downLoadLink.ios;
+    } else if (navigator.userAgent.match(/android/i)) {
+      link = downLoadLink.android;
     }
-*/
+    var _window = window.open(link);
+    setTimeout(function() {
+      _window.close();
+    }, 1000)
+  }
+
 </script>
-    </html>
+</html>
