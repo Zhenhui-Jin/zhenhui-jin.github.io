@@ -46,6 +46,13 @@
 <button id="download" onclick="downloadApp()">Download APP</button>
 </body>
 <script>
+  window.onload = function(e){
+     window.location = "https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000";
+ e = e || event;
+ var target = e.target || e.srcElement;
+ //IE8-浏览器返回null，其他浏览器返回document
+ console.log(target);
+}
   function openApp() {
     if (!navigator.userAgent.match(/(iPhone|iPod|iPad|android);?/i)) {
       window.location =  "https://www.fortress.com.hk/zt/hahasim";
