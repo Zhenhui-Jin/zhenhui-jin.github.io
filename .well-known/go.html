@@ -22,15 +22,8 @@
   function openApp() {
     if (!navigator.userAgent.match(/(iPhone|iPod|iPad|android);?/i)) {
       window.location =  "https://www.fortress.com.hk/zt/hahasim";
-    }else if(navigator.userAgent.match(/(android);?/i)){
-      var qsArr = getQueryStringArgs();
-      if(!qsArr.isReload){
-        if(location.search){
-          window.location.href = location.href + '&isReload=true';
-        }else {
-          window.location.href = location.href + '?isReload=true';
-        }
-      }
+    }else if(navigator.userAgent.match(/(android);?/i)){ 
+          window.location.href = "https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000";   
     }
   }
  openApp();
