@@ -5,12 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Share</title>
 
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      text-align: center;
+      font-family: Arial,"Microsoft YaHei";
+    }
+    button {
+      width: 162px;
+      border: 0;
+      background: #df9940;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 15px;
+      line-height: 40px;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      margin-left: -81px;
+      letter-spacing: .2px;
+    }
+    .bg{
+      width: 100%;
+      height: 100vh;
+      background: url("./bg.jpg") no-repeat center;
+      background: cover;
+    }
+    #download{
+
+    }
+    #openApp1{
+
+    }
+  </style>
 </head>
 <body>
-  <div>
+<div class="bg">
+
+</div>
 <button id="openApp1" onclick="openApp1()">openApp1</button>
-<button id="openApp2" onclick="openApp2()">openApp2</button>
-  </div></body>
+<button id="download" onclick="downloadApp()">Download APP</button>
+</body>
 <script>
   function openApp() {
     if (!navigator.userAgent.match(/(iPhone|iPod|iPad|android);?/i)) {
@@ -26,13 +64,9 @@
       }
     }
   }
-
+ 
  function openApp1(){
         var deepLink = "https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000";
-        window.location = deepLink;
-    }
- function openApp2(){
-        var deepLink = "https://mmediadev-sim.fortress.com.hk/fortress-sim/1111.html?type=7&value=RDPZA1000";
         window.location = deepLink;
     }
   function downloadApp(){
