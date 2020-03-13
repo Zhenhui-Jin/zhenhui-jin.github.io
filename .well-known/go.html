@@ -31,6 +31,7 @@
     .bg{
       width: 100%;
       height: 100vh;
+      background: url("./bg.jpg") no-repeat center;
       background: cover;
     }
     #download{
@@ -49,19 +50,25 @@
     if (!navigator.userAgent.match(/(iPhone|iPod|iPad|android);?/i)) {
       window.location =  "https://www.fortress.com.hk/zt/hahasim";
     }else if(navigator.userAgent.match(/(android);?/i)){
-       setTimeout(function() {
-      window.location = "https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000"; 
-    }, 2000)
-      //window.location = "https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000";
+      var qsArr = getQueryStringArgs();
+      if(!qsArr.isReload){
+        if(location.search){
+          window.location.href = location.href + '&isReload=true';
+        }else {
+          window.location.href = location.href + '?isReload=true';
+        }
+      }
     }
   }
 
-  openApp();
-
-
+  openApp1();
+ function openApp1(){
+        var deepLink = "https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000";
+        window.location = deepLink;
+    }
   function downloadApp(){
     var downLoadLink = { // 下载地址
-      android : "https://mmediadev-sim.fortress.com.hk/fortress-sim/222222.html?type=7&value=RDPZA1000",
+      android : "https://play.google.com/store/apps/details?id=com.fortress.sim",
       ios : "https://apps.apple.com/app/id1482719988"
     }
     var link;
@@ -76,5 +83,23 @@
     }, 1000)
   }
 
+  function getQueryStringArgs(){
+    var qs=location.search.length ? location.search.substring(1) : "";
+    var args={};
+    var items=qs.length ? qs.split("&") : [];
+    var item=null,
+      name=null,
+      value=null,
+      len=items.length;
+    for(var i=0;i<len;i++){
+      item=items[i].split("=");
+      if(item[0].length){
+        name=decodeURIComponent(item[0]);
+        value=decodeURIComponent(item[1]);
+        args[name]=value;
+      }
+    }
+    return args;
+  }
 </script>
 </html>
