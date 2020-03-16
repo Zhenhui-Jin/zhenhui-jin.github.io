@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Share</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Share</title>
 
 </head>
 <body>
-  
-  
-<div>
 
-<button id="openApp1" onclick="openApp1()">openApp1</button> 
-</div>
+
 <div>
- 
-<button id="download" onclick="downloadApp()">Download APP</button>
+    <button id="openApp1" onclick="openApp1()">https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html</button>
 </div>
+<br>
+<div>
+    <button id="openApp2" onclick="openApp2()">haha://mmediadev-sim.fortress.com.hk/fortress-sim/share.html</button>
+</div>
+<br>
+<div>
+    <button id="download" onclick="downloadApp()">Download APP</button>
+</div>
+<br>
 </body>
 <script>
   function openApp() {
     if (!navigator.userAgent.match(/(iPhone|iPod|iPad|android);?/i)) {
       window.location =  "https://www.fortress.com.hk/zt/hahasim";
     }else if(navigator.userAgent.match(/(android);?/i)){ 
-      window.location = "https://mmediadev-sim.fortress.com.hk/fortress-sim/333.html?type=7&value=RDPZA1000";   
+      //window.location = "https://mmediadev-sim.fortress.com.hk/fortress-sim/333.html?type=7&value=RDPZA1000";   
       //window.open("https://mmediadev-sim.fortress.com.hk/fortress-sim/111.html?type=7&value=RDPZA1000");
     }
   }
@@ -32,6 +36,10 @@
     }, 1000)
  function openApp1(){
         var deepLink = "https://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000";
+        window.location = deepLink;
+    }
+ function openApp2(){
+        var deepLink = "haha://mmediadev-sim.fortress.com.hk/fortress-sim/share.html?type=7&value=RDPZA1000";
         window.location = deepLink;
     }
   function downloadApp(){
@@ -69,5 +77,6 @@
     }
     return args;
   }
+
 </script>
 </html>
