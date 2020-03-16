@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Share</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      text-align: center;
+      font-family: Arial,"Microsoft YaHei";
+    }
+    button {
+      width: 162px;
+      border: 0;
+      background: #df9940;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 15px;
+      line-height: 40px;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      margin-left: -81px;
+      letter-spacing: .2px;
+    }
+    .bg{
+      width: 100%;
+      height: 100vh;
+      background: url("./bg.jpg") no-repeat center;
+      background: cover;
+    }
+    #download{
+
+    }
+  </style>
+</head>
+<body>
+<div class="bg">
+
+</div>
+<button id="download" onclick="downloadApp()">Download APP</button>
+</body>
+<script>
+  function openApp() {
+    if (!navigator.userAgent.match(/(iPhone|iPod|iPad|android);?/i)) {
+      //window.location =  "https://www.fortress.com.hk/zt/hahasim";
+    }else if(navigator.userAgent.match(/android/i)){
+      //var _window = window.open("haha://mmediadev-sim.fortress.com.hk/fortress-sim");
+      var deeplink = "haha://mmediadev-sim.fortress.com.hk/fortress-sim";
+      var a = document.createElement('a');
+      a.setAttribute('href', deeplink);
+      document.body.appendChild(a);
+      a.click();
+
+    }
+  }
+
+  openApp();
+
+
+  function downloadApp(){
+    var downLoadLink = { // 下载地址
+      android : "https://play.google.com/store/apps/details?id=com.fortress.sim",
+      ios : "https://apps.apple.com/app/id1482719988"
+    }
+    var link;
+    if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+      link = downLoadLink.ios;
+    } else if (navigator.userAgent.match(/android/i)) {
+      link = downLoadLink.android;
+    }
+    var _window = window.open(link);
+    setTimeout(function() {
+      _window.close();
+    }, 1000)
+  }
+
+</script>
+</html>
