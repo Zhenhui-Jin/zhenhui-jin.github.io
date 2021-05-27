@@ -30,5 +30,14 @@
             "4B:78:16:26:36:E6:5E:C6:3F:BC:5E:4F:4B:13:36:F0:9A:44:77:CB:FA:D9:75:66:87:A2:34:C7:A4:5A:10:7C"
         ]
     }
+},
+ {
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.asw.wine",
+    "sha256_cert_fingerprints":
+    ["DE:21:9A:32:BB:B1:AC:D8:6B:F7:50:50:7E:48:66:EC:D2:E4:59:6B:65:6E:0D:62:CD:82:08:F8:C4:52:A1:86"]
+  }
 }
 ]
